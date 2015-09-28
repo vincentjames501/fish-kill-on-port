@@ -37,14 +37,14 @@ $ kill-on-port 3000 8080
 
 # License
 
-[MIT][mit] © [{{USER}}][author] et [al][contributors]
+[MIT][mit] © [Vincent Pizzo][author] et [al][contributors]
 
 
 [mit]:            http://opensource.org/licenses/MIT
-[author]:         http://github.com/{{USER}}
-[contributors]:   https://github.com/{{USER}}/pkg-kill-on-port/graphs/contributors
+[author]:         http://github.com/vincentjames501
+[contributors]:   https://github.com/vincentjames501/fish-kill-on-port/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
 
 [license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
-[travis-badge]:   http://img.shields.io/travis/{{USER}}/kill-on-port.svg?style=flat-square
-[travis-link]:    https://travis-ci.org/{{USER}}/kill-on-port
+[travis-badge]:   http://img.shields.io/travis/vincentjames501/kill-on-port.svg?style=flat-square
+[travis-link]:    https://travis-ci.org/vincentjames501/kill-on-port
