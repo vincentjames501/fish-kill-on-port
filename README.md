@@ -26,13 +26,27 @@ Usage: kill-on-port [OPTION]... PORTS...
 Kills one or more processes using the given port(s).
 
 Options:
+    -l, --list      List processes using the specified ports (does not kill)
 	-r, --root		Attempts to kill the process as root
 	-f, --force		Does not ask for confirmation
 	-h, --help		Prints usage
 ```
 
+## Example
+
 ```fish
-$ kill-on-port 3000 8080
+# Start two Python HTTP servers on ports 8001 and 8002 respectfully
+$ python -m SimpleHTTPServer 8001 > /dev/null &       
+$ python -m SimpleHTTPServer 8002 > /dev/null &     
+
+# Let's kill em'!
+$ kill-on-port 8001 8002                                                 
+Found process named python2.7 with process id 66715 using port 8001
+Continue (y/n): y
+Successfully killed 66715
+Found process named python2.7 with process id 66748 using port 8002
+Continue (y/n): y
+Successfully killed 66748
 ```
 
 # License
