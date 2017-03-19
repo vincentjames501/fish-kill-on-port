@@ -22,13 +22,14 @@ $ omf install kill-on-port
 ## Usage
 
 ```
-Usage: kill-on-port [OPTION]... PORTS...
+Usage: kill-on-port [OPTION]...
 Kills one or more processes using the given port(s).
 
 Options:
-    -l, --list      List processes using the specified ports (does not kill)
+  -l, --list    List processes using the specified ports (does not kill)
 	-r, --root		Attempts to kill the process as root
 	-f, --force		Does not ask for confirmation
+  -p, --port    The port to to look at (one or more required)
 	-h, --help		Prints usage
 ```
 
