@@ -46,7 +46,7 @@ function kill-on-port -d "Kills a process that is using the given port"
     __kill-on-port.print-usage
   else
     for port in $ports
-      set -l process (lsof -i -P | grep $port)
+      set -l process (lsof -n -i -P | grep $port)
       if test -n "$process"
         set -l name (echo $process | awk '{print $1}')
         set -l pid (echo $process | awk '{print $2}')
