@@ -17,6 +17,7 @@ function kill-on-port -d "Kills a process that is using the given port"
   set -l force 0
   set -l list 0
   set -l root ""
+  set -l ports
 
   for i in (echo $argv | sed 's|--*|\\'\n'|g' | grep -v '^$')
     echo $i | read -l option value
@@ -29,7 +30,7 @@ function kill-on-port -d "Kills a process that is using the given port"
       case l list
         set list 1
       case p port
-        set -l ports $ports $value
+        set ports $ports $value
       case h
         __kill-on-port.print-usage
         return
@@ -68,7 +69,7 @@ function kill-on-port -d "Kills a process that is using the given port"
             end
           end
         end
-        
+
       else
         echo "Couldn't find a process to kill on port $port"
       end
